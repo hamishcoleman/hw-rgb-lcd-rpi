@@ -1,0 +1,8 @@
+
+# Dont track backup files
+*.bak
+*.bck
+
+# This is a cache of the other libs
+hw-rgb-lcd-rpi-cache.lib
+
