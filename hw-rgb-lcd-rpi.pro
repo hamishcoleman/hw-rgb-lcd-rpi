@@ -1,4 +1,4 @@
-update=Thu 10 Nov 2016 15:45:59 HKT
+update=Thu 10 Nov 2016 16:03:38 HKT
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=rpi_a+b+_2bhat
+LibName31=conn-lcd
