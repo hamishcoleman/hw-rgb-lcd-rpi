@@ -11,3 +11,15 @@ hw-rgb-lcd-rpi-cache.lib
 # This is generated data
 hw-rgb-lcd-rpi.net
 
+# fabrication outputs
+*-B.Cu.gbl
+*-B.Mask.gbs
+*-B.SilkS.gbo
+*-Edge.Cuts.gm1
+*-F.Cu.gtl
+*-F.Mask.gts
+*-F.Paste.gtp
+*-F.SilkS.gto
+*-NPTH.drl
+*.drl
+
