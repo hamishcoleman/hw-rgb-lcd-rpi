@@ -1,7 +1,9 @@
 
-# Dont track backup files
+# Dont track backup files (that is what a VCS is for)
 *.bak
 *.bck
+*.kicad_pcb-bak
+
 
 # This is a cache of the other libs
 hw-rgb-lcd-rpi-cache.lib
