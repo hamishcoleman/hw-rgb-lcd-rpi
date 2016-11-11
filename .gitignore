@@ -6,3 +6,6 @@
 # This is a cache of the other libs
 hw-rgb-lcd-rpi-cache.lib
 
+# This is generated data
+hw-rgb-lcd-rpi.net
+
