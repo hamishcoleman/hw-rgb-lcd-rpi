@@ -1,0 +1,9 @@
+This design is to adapt a "raw" or "dotclock" LCD to the Raspberry-Pi
+expansion pinout, and allow it to be connected directly to the GPU
+(not via SPI)
+
+TODO:
+- clarify the OSHW licence
+- change the via drill size to 0.3mm, but leave via pad size as 0.6mm.
+- Add more documentation
+
