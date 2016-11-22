@@ -1,11 +1,11 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.4+dfsg1-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.2+dfsg1-2~bpo8+1-stable)
 
   (general
     (links 100)
     (no_connects 0)
-    (area 108.494999 89.408 189.955001 130.996)
+    (area 94.997001 80.97 189.955001 129.372)
     (thickness 1.6)
-    (drawings 10)
+    (drawings 11)
     (tracks 747)
     (zones 0)
     (modules 15)
@@ -1041,11 +1041,11 @@
   )
 
   (module Symbols:OSHW-Logo_5.7x6mm_SilkScreen (layer F.Cu) (tedit 0) (tstamp 5825991C)
-    (at 158.623 116.586)
+    (at 158.75 115.062)
     (descr "Open Source Hardware Logo")
     (tags "Logo OSHW")
     (attr virtual)
-    (fp_text reference REF*** (at 0 0) (layer F.SilkS) hide
+    (fp_text reference REF*** (at 0 7.874) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value OSHW-Logo_5.7x6mm_SilkScreen (at 0.127 13.335) (layer F.Fab) hide
@@ -1392,6 +1392,9 @@
       (xy 0.376964 -2.709982)) (layer F.SilkS) (width 0.01))
   )
 
+  (gr_text CERN-OHL (at 158.75 118.872) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.2)))
+  )
   (dimension 65.024 (width 0.3) (layer Dwgs.User)
     (gr_text "65.024 mm" (at 148.59 82.47) (layer Dwgs.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
