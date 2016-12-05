@@ -4,6 +4,8 @@ expansion pinout, and allow it to be connected directly to the GPU
 
 TODO:
 - clarify the OSHW licence
-- change the via drill size to 0.3mm, but leave via pad size as 0.6mm.
 - Add more documentation
+- The lq043t1dg03 footprint needs adjusting - the large mechanical stay
+  pads are in the wrong places
+- All the custom footprints need a pin 1 indicator
 
