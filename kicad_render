@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+#
+# Script to use the kicad automation bindings to generate gerbers from the
+# current pcb
+#
+# Based on a script from
+#  https://scottbezek.blogspot.hk/2016/04/scripting-kicad-pcbnew-exports.html
+#
+
+import sys
+import pcbnew
+
+layers = {
+    'Edge.Cuts': pcbnew.Edge_Cuts,
+    'F.Cu':      pcbnew.F_Cu,
+    'F.SilkS':   pcbnew.F_SilkS,
+    'F.Mask':    pcbnew.F_Mask,
+    'F.Paste':   pcbnew.F_Paste,
+    'B.Cu':      pcbnew.B_Cu,
+    'B.SilkS':   pcbnew.B_SilkS,
+    'B.Mask':    pcbnew.B_Mask,
+}
+
+# FIXME: drill files
+
+pcb_file = sys.argv[1]
+
+# Load board and initialize plot controller
+board = pcbnew.LoadBoard(pcb_file)
+
+# First, plot the gerbers
+pc = pcbnew.PLOT_CONTROLLER(board)
+
+po = pc.GetPlotOptions()
+po.SetUseGerberProtelExtensions(True)
+# po.SetPlotFrameRef(False)
+
+for name, layer in layers.iteritems():
+    # Set current layer
+    pc.SetLayer(layer)
+
+    # Plot single layer to file
+    pc.OpenPlotfile(name, pcbnew.PLOT_FORMAT_GERBER, name)
+    print("Plotting to " + pc.GetPlotFileName())
+    pc.PlotLayer()
+    pc.ClosePlot()
+
+# next, output the drill file
+ew = pcbnew.EXCELLON_WRITER(board)
+
+ew.SetFormat( False ) # set to imperial
+ew.CreateDrillandMapFilesSet( pc.GetPlotDirName(), True, False );
+

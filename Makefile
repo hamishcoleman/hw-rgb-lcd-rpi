@@ -20,10 +20,13 @@ version:=$(shell git describe --dirty)
 
 zip: $(project)-$(version).zip
 
-$(project)-$(version).zip: $(gerbers)
+$(project)-$(version).zip:
 	git archive --format=zip -o $@ --prefix=$(project)-$(version)/ HEAD
 
 zip.gerbers: $(project)-$(version).gerbers.zip
+
+$(gerbers): $(project).kicad_pcb
+	./kicad_render $<
 
 $(project)-$(version).gerbers.zip: $(gerbers)
 	zip $@ $^
